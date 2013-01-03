@@ -1,0 +1,19 @@
+function list()
+{
+	alert("hah");//users.json
+	alert(users)
+    us = eval("("+users+")");
+    for(var u in us)
+    {
+        alert(u[name]);
+    }
+
+
+//    $.each(users,function(i){
+//        alert(users[i][0]);
+//        alert(users[i][1]);
+//    });
+	
+}
+		
+	

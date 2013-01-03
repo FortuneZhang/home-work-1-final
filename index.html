@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>订餐</title>
+	<link rel="stylesheet"  href="lib/jquery.mobile-1.2.0/jquery.mobile-1.2.0.min.css" />
+   	<script src="lib/jquery.js"></script>
+	<script src="lib/jquery.mobile-1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script src='data/foods.json' type='text/javascript'></script>
+        <script src='data/restaurants.json' type='text/javascript'></script>
+        <script src='data/users.json' type='text/javascript'></script>
+	<script src='js/application.js'></script>
+
+</head>
+<body>
+<input type="hidden" id="txtHidden" value="">
+<!--首页-->
+   <div data-role="page" id="index">
+	<div data-role="header">
+		<h1>订餐</h1>
+	</div><!-- /header -->
+	<div data-role="content" >	
+		<p><a href="#helpOrder" data-role="button">帮订餐</a></p>	
+		<p><a href="#viewOrder" data-role="button">看订单</a></p>
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="d">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+  </div><!-- /page index -->
+<!-- 帮订餐-->
+
+  <div date-role= "page" id = "helpOrder">	
+	<div data-role="header">	
+	 <a data-role="button" href="#index" class="ui-btn-left">
+                    Back
+         </a> <h3> Header</h3>
+	</div><!-- /header -->
+	<div data-role="content" >
+
+        <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+                <label for="txtChoiceUser">
+                    人
+                </label>
+                <input name=""  placeholder="" value="" type="text" id="txtChoiceUser"/>
+            </fieldset>
+            <p><a href="#choiceUser" data-transition="slide" data-role="button">
+            选人
+        </a></p>
+        </div>
+
+        <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+                <label for="txtChoiceRestaurant">
+                    餐厅
+                </label>
+                <input name=""  placeholder="" value="" type="text" id="txtChoiceRestaurant"/>
+            </fieldset>
+            <a href="#choiceRestaurant" data-transition="slide" data-role="button">
+            选餐厅
+        </a></p>
+        </div>
+
+        <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+                <label for="txtChoicePackage" >
+                    套餐
+                </label>
+                <input name=""  placeholder="" value="" type="text" id="txtChoicePackage"/>
+            </fieldset>
+            <p><a href="#choicePackage" data-role="button" >
+                选套餐
+            </a> </p>
+        </div>
+
+        <p> <input  type="button" value="确定" data-role="button" onclick="return sureToSubmit()" /></p>
+	</div><!-- /content -->
+	<div data-role = "footer">
+	</div>
+  </div>
+
+<!--查看订单-->
+ <div data-role = "page" id= "viewOrder">
+	<div data-role = "header">
+        <a data-role="button" href="#index" class="ui-btn-left">
+            Back
+        </a> <h3> Header</h3>
+	</div>
+	<div data-role = "content" id="viewOrderContent">
+
+	</div>
+	<div data-role = "footer" id="viewOrderFooter" >
+
+	</div>
+ </div>
+<!--选人-->
+ <div data-role = "page" id= "choiceUser">
+	<div data-role = "header">
+        <a data-role="button" href="#helpOrder" class="ui-btn-left">
+            Back
+        </a> <h3> Header</h3>
+	</div>
+	<div data-role = "content" id="userContent">
+	</div>
+	<div data-role = "footer">
+	</div>
+
+ </div>
+<!--选餐厅-->
+ <div data-role = "page" id= "choiceRestaurant">
+	<div data-role = "header">
+        <a data-role="button" href="#helpOrder" class="ui-btn-left">
+            Back
+        </a> <h3> Header</h3>
+	</div>
+	<div data-role = "content" id="RestaurantContent">
+
+	</div>
+	<div data-role = "footer">
+	</div>
+ </div>
+<!--选套餐-->
+ <div data-role = "page" id= "choicePackage">
+	<div data-role = "header">
+        <a data-role="button" href="#helpOrder" class="ui-btn-left">
+            Back
+        </a> <h3> Header</h3>
+	</div>
+	<div data-role = "content" id="PackageContent">
+	</div>
+	<div data-role = "footer">
+	</div>
+ </div>
+
+</body>
+</body>
+</html>
