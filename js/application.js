@@ -179,7 +179,7 @@ function showUserUnorder()
     {
         if(0 !=userArray[m])
         {
-            str ='<ul><li><span style= "font-size: larger;">';
+            str ='<ul  style="list-style:none"><li><span style= "font-size: larger;">';
             str += userArray[m] +'</li></ul>';
             $("#viewOrderContent").append(str + "<hr>");
         }
